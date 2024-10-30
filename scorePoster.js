@@ -1,8 +1,10 @@
 
 // scorePoster.js
+const renderAppUrl = 'YOUR_RENDER_APP_URL'; // Replace with your Render app URL
+
 const postScore = async (score) => {
   try {
-    const response = await fetch('/scores', {
+    const response = await fetch(`${renderAppUrl}/scores`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
