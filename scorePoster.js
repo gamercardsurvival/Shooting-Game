@@ -1,5 +1,5 @@
 // scorePoster.js
-const renderAppUrl = 'https://checking-my2a.onrender.com'; // Replace with your Render app URL
+const renderAppUrl = 'https://checking-re3c.onrender.com'; // Replace with your Render app URL
 
 const postScore = async (score) => {
   try {
