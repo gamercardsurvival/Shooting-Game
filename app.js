@@ -88,7 +88,7 @@ const gameOverLoader = () => {
   }
   
   postScore(playerScore);
-}
+
     
     // adding text to playagain button
 
