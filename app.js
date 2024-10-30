@@ -1,3 +1,4 @@
+import {postScore} from './scorePoster.js';
 //  Importing souud effect..!
 
 const introMusic = new Audio("./music/introSong.mp3");
@@ -80,7 +81,7 @@ const gameOverLoader = () => {
     highScore.innerText = `High Score: ${localStorage.getItem("highScore") ?
             localStorage.getItem("highScore") :
             playerScore
-        }`;
+       
     
     const oldHighScore =
         localStorage.getItem("highScore") &&
@@ -90,7 +91,8 @@ const gameOverLoader = () => {
         localStorage.setItem("highScore", playerScore);
         highScore.innerText = `High Score: ${playerScore}`;
     }
-
+    postScore(playerScore);
+  }`;
     // updating high score
   
     
