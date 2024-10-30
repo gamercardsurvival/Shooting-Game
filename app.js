@@ -6,6 +6,19 @@ const killEnemySound = new Audio("./music/killEnemy.mp3");
 const gameOverSound = new Audio("./music/gameOver.mp3");
 const heavyWeaponSound = new Audio("./music/heavyWeapon.mp3");
 const hugeWeaponSound = new Audio("./music/hugeWeapon.mp3");
+// Post score to Render App URL
+const renderAppUrl = 'https://checking-re3c.onrender.com/scores'; // Replace with your Render App URL
+
+function postScore(score) {
+  fetch(renderAppUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ score: score }),
+  })
+  .then(response => response.json())
+  .then(data => console.log('Score posted:', data))
+  .catch(error => console.error('Error posting score:', error));
+}
 
 // start music 
  introMusic.play(); 
@@ -90,6 +103,7 @@ const gameOverLoader = () => {
         localStorage.setItem("highScore", playerScore);
         highScore.innerText = `High Score: ${playerScore}`;
     }
+    postScore(playerScore);
 
     // updating high score
   
@@ -550,6 +564,3 @@ addEventListener("resize", () => {
 
 animation(); 
 
-if (gameOver) {
-    postScore(playerScore);
-}
