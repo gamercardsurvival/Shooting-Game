@@ -550,7 +550,3 @@ addEventListener("resize", () => {
 
 animation(); 
 
-import {postScore} from './scorePoster.js';
-if (gameOver) {
-    postScore(playerScore);
-}
