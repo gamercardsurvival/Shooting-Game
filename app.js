@@ -9,11 +9,12 @@ const hugeWeaponSound = new Audio("./music/hugeWeapon.mp3");
 // Post score to Render App URL
 const renderAppUrl = 'https://checking-dex9.onrender.com/scores'; // Replace with your Render App URL
 
-function postScore(score) {
+function postScore(score) { 
+  const userId= Telegram.WebApp.getUserID();
   fetch(renderAppUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ score: score }),
+    body: JSON.stringify({ userId: userId, score: score }),
   })
   .then(response => response.json())
   .then(data => console.log('Score posted:', data))
