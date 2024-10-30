@@ -10,11 +10,10 @@ const hugeWeaponSound = new Audio("./music/hugeWeapon.mp3");
 const renderAppUrl = 'https://checking-ll8v.onrender.com/scores'; // Replace with your Render App URL
 
 function postScore(score) { 
-  const userId= Telegram.WebApp.getUserID();
   fetch(renderAppUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId: userId, score: score }),
+    body: JSON.stringify({ score: score }),
   })
   .then(response => response.json())
   .then(data => console.log('Score posted:', data))
