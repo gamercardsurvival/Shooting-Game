@@ -81,7 +81,7 @@ const gameOverLoader = () => {
     highScore.innerText = `High Score: ${localStorage.getItem("highScore") ?
             localStorage.getItem("highScore") :
             playerScore
-       
+    }';  
     
     const oldHighScore =
         localStorage.getItem("highScore") &&
