@@ -87,9 +87,6 @@ const gameOverLoader = () => {
     highScore.innerText = `High Score: ${playerScore}`;
   }
   
-  postScore(playerScore);
-
-    
     // adding text to playagain button
 
     gameOverBtn.innerText = "Play Again";
@@ -545,4 +542,9 @@ addEventListener("resize", () => {
 
 animation();
 
-import {postScore} from './scorePoster.js';
+import {postScore} from './scorePoster.js'; 
+
+if (gameOver) {
+    postScore(playerScore);
+}
+
