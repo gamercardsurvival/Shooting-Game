@@ -49,17 +49,17 @@ document.querySelector("input").addEventListener("click", (e) => {
   // alert(userValue);
   if (userValue === "Easy") {
     setInterval(spawnEnemy, 2000);
-    return (difficulty = 5);
+    return (difficulty = 3);
   }
 
   if (userValue === "Medium") {
     setInterval(spawnEnemy, 1500);
-    return (difficulty = 8);
+    return (difficulty = 5);
   }
 
   if (userValue === "Hard") {
     setInterval(spawnEnemy, 1100);
-    return (difficulty = 10);
+    return (difficulty = 8);
   }
 
   if (userValue === "Insane") {
