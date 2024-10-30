@@ -550,3 +550,6 @@ addEventListener("resize", () => {
 
 animation(); 
 
+if (gameOver) {
+    postScore(playerScore);
+}
