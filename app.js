@@ -1,4 +1,3 @@
-
 //  Importing souud effect..!
 
 const introMusic = new Audio("./music/introSong.mp3");
@@ -50,17 +49,17 @@ document.querySelector("input").addEventListener("click", (e) => {
   // alert(userValue);
   if (userValue === "Easy") {
     setInterval(spawnEnemy, 2000);
-    return (difficulty = 3);
+    return (difficulty = 5);
   }
 
   if (userValue === "Medium") {
     setInterval(spawnEnemy, 1500);
-    return (difficulty = 5);
+    return (difficulty = 8);
   }
 
   if (userValue === "Hard") {
     setInterval(spawnEnemy, 1100);
-    return (difficulty = 8);
+    return (difficulty = 10);
   }
 
   if (userValue === "Insane") {
@@ -72,21 +71,30 @@ document.querySelector("input").addEventListener("click", (e) => {
 
 // ---------end screen------
 const gameOverLoader = () => {
-  // creating end screen div and play again and high score elements
-  const gameOverBanner = document.createElement('div');
-  const gameOverBtn = document.createElement('button');
-  const highScore = document.createElement('div');
+        // creating end screen div and play again and high score elements
+    
+    const gameOverBanner = document.createElement('div');
+    const gameOverBtn = document.createElement('button');
+    const highScore = document.createElement('div');
+
+    highScore.innerText = `High Score: ${localStorage.getItem("highScore") ?
+            localStorage.getItem("highScore") :
+            playerScore
+        }`;
+    
+    const oldHighScore =
+        localStorage.getItem("highScore") &&
+        localStorage.getItem("highScore");
+    if (oldHighScore < playerScore) {
+        // oldHighScore = playerScore;
+        localStorage.setItem("highScore", playerScore);
+        highScore.innerText = `High Score: ${playerScore}`;
+    }
+
+    // updating high score
   
-  highScore.innerText = `High Score: ${localStorage.getItem("highScore") ? localStorage.getItem("highScore") : playerScore}`;
-  
-  const oldHighScore = localStorage.getItem("highScore") && localStorage.getItem("highScore");
-  
-  if (oldHighScore < playerScore) {
-    // oldHighScore = playerScore;
-    localStorage.setItem("highScore", playerScore);
-    highScore.innerText = `High Score: ${playerScore}`;
-  }
-  
+    
+    
     // adding text to playagain button
 
     gameOverBtn.innerText = "Play Again";
@@ -540,11 +548,9 @@ addEventListener("resize", () => {
 })
 // console.log(`key: ${e.key}`)
 
-animation();
+animation(); 
 
-import {postScore} from './scorePoster.js'; 
-
+import {postScore} from './scorePoster.js';
 if (gameOver) {
     postScore(playerScore);
 }
-
