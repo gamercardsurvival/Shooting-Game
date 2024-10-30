@@ -72,30 +72,23 @@ document.querySelector("input").addEventListener("click", (e) => {
 
 // ---------end screen------
 const gameOverLoader = () => {
-        // creating end screen div and play again and high score elements
-    
-    const gameOverBanner = document.createElement('div');
-    const gameOverBtn = document.createElement('button');
-    const highScore = document.createElement('div');
-
-    highScore.innerText = `High Score: ${localStorage.getItem("highScore") ?
-            localStorage.getItem("highScore") :
-            playerScore
-    }';  
-    
-    const oldHighScore =
-        localStorage.getItem("highScore") &&
-        localStorage.getItem("highScore");
-    if (oldHighScore < playerScore) {
-        // oldHighScore = playerScore;
-        localStorage.setItem("highScore", playerScore);
-        highScore.innerText = `High Score: ${playerScore}`;
-    }
-    postScore(playerScore);
-  }`;
-    // updating high score
+  // creating end screen div and play again and high score elements
+  const gameOverBanner = document.createElement('div');
+  const gameOverBtn = document.createElement('button');
+  const highScore = document.createElement('div');
   
-    
+  highScore.innerText = `High Score: ${localStorage.getItem("highScore") ? localStorage.getItem("highScore") : playerScore}`;
+  
+  const oldHighScore = localStorage.getItem("highScore") && localStorage.getItem("highScore");
+  
+  if (oldHighScore < playerScore) {
+    // oldHighScore = playerScore;
+    localStorage.setItem("highScore", playerScore);
+    highScore.innerText = `High Score: ${playerScore}`;
+  }
+  
+  postScore(playerScore);
+}
     
     // adding text to playagain button
 
