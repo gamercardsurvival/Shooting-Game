@@ -1,109 +1,113 @@
 .myGame {
-    height: 100vh;
-  }
-  
-  canvas {
-    background-color: black;
-    max-width: 100%;
-    /* cursor: crosshair; */
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .scoreBoard {
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    display: none;
-  }
-  
-  form {
-    background-color: rgba(0, 0, 0, 0.160);
-    height: 60vh;
-    width: 60vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    border-radius: 50px;
-    justify-content: center;
-    align-items: center;
-  }
-  form > select,
-  form select option {
-    padding: 2vmax;
-    width: 20vw;
-    text-align: center;
-    font-size: 1.4vmax;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    outline: none;
-    transition: all 0.5s;
-    border: none;
-  }
-  form > input {
-    margin: 2vmax;
-    padding: 2vmax;
-    width: 20vw;
-    cursor: pointer;
-    border: none;
-    color: black;
-    transition: all 0.5s;
-    background-color: whitesmoke;
-    font-size: 1.4vmax;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    outline: none;
-  }
-  
-  form > select:hover {
-    box-shadow: 0 0 20px lavender;
-  }
-  form > input:hover {
-    background-color: rgba(0, 0, 0, 0.041);
-    color:whitesmoke; 
-    box-shadow: 0 0 10px whitesmoke;
-  }
-  
-  .gameover {
-    background-color: rgba(0, 0, 0, 0.041);
-    border-radius: 5px;
-    position: fixed;
-    top: 50%;
-    height: 100vh;
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .gameover > button {
-    padding: 1vmax;
-    border: 2px solid whitesmoke;
-    cursor: pointer;
-    width: 10vw;
-    background-color: whitesmoke;
-    font: 900 1.1vmax;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    transition: all 0.5s;
-  }
-  .gameover > button:hover {
-    background-color: rgb(30, 30, 34);
-    color: whitesmoke;
-    box-shadow: 0 0 10px whitesmoke;
-  }
-  
-  .gameover > div {
-    margin: 2vmax;
-    color: whitesmoke;
-    font: 600 1.2vmax;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+  height: 100vh;
+}
+
+canvas {
+  background-color: black;
+  max-width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.scoreBoard {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  display: none;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.160);
+  height: 60vh;
+  width: 60vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+form > select,
+form select option {
+  padding: 2vmax;
+  width: 20vw;
+  text-align: center;
+  font-size: 1.4vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  outline: none;
+  transition: all 0.5s;
+  border: none;
+}
+
+form > input {
+  margin: 2vmax;
+  padding: 2vmax;
+  width: 20vw;
+  cursor: pointer;
+  border: none;
+  color: black;
+  transition: all 0.5s;
+  background-color: whitesmoke;
+  font-size: 1.4vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  outline: none;
+}
+
+form > select:hover {
+  box-shadow: 0 0 20px lavender;
+}
+
+form > input:hover {
+  background-color: rgba(0, 0, 0, 0.041);
+  color: whitesmoke;
+  box-shadow: 0 0 10px whitesmoke;
+}
+
+.gameover {
+  background-color: rgba(0, 0, 0, 0.041);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  height: 30vh;
+  width: 30vw;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameover > button {
+  padding: 2vmax;
+  border: 2px solid whitesmoke;
+  cursor: pointer;
+  width: 20vw;
+  background-color: whitesmoke;
+  font: 900 1.5vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: all 0.5s;
+  margin: 2vmax;
+}
+
+.gameover > button:hover {
+  background-color: rgb(30, 30, 34);
+  color: whitesmoke;
+  box-shadow: 0 0 10px whitesmoke;
+}
+
+.gameover > div {
+  margin: 2vmax;
+  color: whitesmoke;
+  font: 600 1.2vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
