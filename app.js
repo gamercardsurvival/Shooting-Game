@@ -1,4 +1,4 @@
-import {postScore} from './scorePoster.js';
+
 //  Importing souud effect..!
 
 const introMusic = new Audio("./music/introSong.mp3");
@@ -544,3 +544,5 @@ addEventListener("resize", () => {
 // console.log(`key: ${e.key}`)
 
 animation();
+
+import {postScore} from './scorePoster.js';
