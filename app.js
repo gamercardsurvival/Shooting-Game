@@ -88,7 +88,8 @@ const gameOverLoader = () => {
         // creating end screen div and play again and high score elements
     
     const gameOverBanner = document.createElement('div');
-    const gameOverBtn = document.createElement('button');
+    const gameOverBtn = document.createElement('button'); 
+    postScore(playerScore);
     const highScore = document.createElement('div');
 
     highScore.innerText = `High Score: ${localStorage.getItem("highScore") ?
@@ -104,7 +105,7 @@ const gameOverLoader = () => {
         localStorage.setItem("highScore", playerScore);
         highScore.innerText = `High Score: ${playerScore}`;
     }
-    postScore(playerScore);
+    
 
     // updating high score
   
