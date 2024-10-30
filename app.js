@@ -7,7 +7,7 @@ const gameOverSound = new Audio("./music/gameOver.mp3");
 const heavyWeaponSound = new Audio("./music/heavyWeapon.mp3");
 const hugeWeaponSound = new Audio("./music/hugeWeapon.mp3");
 // Post score to Render App URL
-const renderAppUrl = 'https://checking-42va.onrender.com/scores'; // Replace with your Render App URL
+const renderAppUrl = 'https://checking-1zcx.onrender.com/scores'; // Replace with your Render App URL
 
 function postScore(score) {
   fetch(renderAppUrl, {
